@@ -17,6 +17,7 @@
 - Run the test and everything should be passing. 
 - ```Refactoring changes the programs in small steps, so if you make a mistake, it is easy to find where the bug is.```
 - Extract temp variables and create getTotalAmount method
+- The next part would be be looking at how the charge is being calculated in `Rental`. Again its relying on `MOVIE_TYPE`, so that's a smell. 
 
 ##### Moving the Amount Calculation
 
@@ -26,5 +27,11 @@
 ##### Decomposing and restructuring frequentRenterPoints
 
 - Use `Move Method` and move the calculation to referral points. 
+
+##### Refactoring of Charge calculation in Rental
+
+- The first part of this problem is that switch statement. It is a bad idea to do a switch based on an attribute of another object. If you must use a switch statement, it should be on your own data, not on someone else’s.That means charge calculation should be moved to `Movie` 
+- I could not refactor this using `move` effectively. It essentially moves entire method and then I would have to go everywhere to change the call to movie instead of calling `_movie().amount()`. It should be on movie, but internally movie will call rental. Need to check how to do this. 
+
 
 
