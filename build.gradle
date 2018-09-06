@@ -1,0 +1,27 @@
+group 'com.video-store'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'idea'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    testCompile "org.mockito:mockito-core:1.+"
+}
+
+test {
+    reports {
+        junitXml.enabled = false
+        html.enabled = true
+        testLogging {
+            events "passed", "skipped", "failed", "standardOut", "standardError"
+        }
+    }
+}
+
