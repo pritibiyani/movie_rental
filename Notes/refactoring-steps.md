@@ -6,7 +6,9 @@
 
 1. Add test for existing code if not present already 
 2. Statement in Customer looks a crux of application and doing lots of things. Try to refactor that first by understanding what it is doing. 
-3. Refactored `amount` method does not use anything which belongs to Customer. Rather it's getting everything from `rental` and doing calculations. Move the calculation to rental instead of doing in Customer. Is this delegation? And code smell over here is `law of delimeters.`  
+3. Refactored `amount` method does not use anything which belongs to Customer. Rather it's getting everything from `rental` and doing calculations. Move the calculation to rental instead of doing in Customer. Is this delegation? And code smell over here is `law of delimeters.` 
+4. The next step would be doing same thing in the for loop which is calculating `frequentRenterPoints`
+ 
 
 ##### Decomposing and restructuring Statement Method
 
@@ -20,5 +22,8 @@
 - Use `Move Method` and move the calculation to Rental. 
 - Change method name as now earlier method name does not make any sense. 
  
+##### Decomposing and restructuring frequentRenterPoints
+
+- Use `Move Method` and move the calculation to referral points. 
 
 
