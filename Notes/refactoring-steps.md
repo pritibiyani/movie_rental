@@ -16,6 +16,7 @@
 - When we by default use refactor, it will refactor with amount as well. And then we realize that total amount is not concern of extracted method, and hence get rid of `totalAmount` from extracted method and change method signature. 
 - Run the test and everything should be passing. 
 - ```Refactoring changes the programs in small steps, so if you make a mistake, it is easy to find where the bug is.```
+- Extract temp variables and create getTotalAmount method
 
 ##### Moving the Amount Calculation
 
