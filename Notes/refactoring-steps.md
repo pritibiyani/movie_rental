@@ -41,5 +41,8 @@
 
 - We have used here, price as a state of the Movie. So if we need to change the amount of existing price, all we need to do is change the amount in respective PriceType.
 - We have delegated calculation of price and frequent rental points to Price.  
+
+#### Price as Strategy instead of state 
+
  
 
